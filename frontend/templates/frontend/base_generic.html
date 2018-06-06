@@ -1,0 +1,135 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Truckr Logistics - The most comfortable way to connect shippers to carriers</title>
+
+    <link href="{% static 'css/semantic-ui/semantic.min.css' %}" rel="stylesheet" type="text/css" />
+    {% block stylesheets %}
+        <link href="{% static 'css/frontend/index.css' %}" rel="stylesheet" type="text/css" />
+    {% endblock %}
+</head>
+<body>
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden borderless inverted menu">
+    <div class="ui container">
+        <div class="item"><img src="" class="ui tiny image" style=""></div>
+        <div class="right menu">
+            <a class="active item" href="">Home</a>
+            <a class="item" href="">About</a>
+            <a class="item" href="">How It Works</a>
+
+            <div class="item">
+
+                <a class="ui blue button" href="">Create Order</a></a>
+            </div>
+            <div class="item">
+
+                <a class="ui inverted red button" href="">Sign Out</a>
+            </div>
+
+            <div class="item">
+                <a class="ui  button" href="">Login</a>
+            </div>
+            <div class="item">
+                <a class="ui primary button" href="">Signup</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+    <div class="item"><div class="ui sub blue header">PharmaX</div></div>
+    <a class="active item">Home</a>
+    <a class="item" href="">About</a>
+    <a class="item" href="">How It Works</a>
+    {% if user.is_authenticated %}
+        <a class=" item" href="">Home</a></a>
+        <a class=" item" href="">Sign Out</a>
+    {% else %}
+    <a class="item" href="">Login</a>
+    <a class="item" href="">Signup</a>
+    {% endif %}
+</div>
+<!-- Page Contents -->
+<div class="pusher">
+
+    {% block content %}
+
+        {% block menu %}
+            <div class="ui container">
+                <div class="ui large secondary inverted menu">
+                    <a class="toc item">
+                        <i class="sidebar icon"></i>
+                    </a>
+                    <div class="item"><div class="ui sub logo header">PharmaX</div></div>
+
+                    <a class="active right item" href="">Home</a>
+                    <a class="item" href="">About</a>
+                    <a class="item" href="">How It Works</a>
+                    <div class=" item">
+
+                            <a class="ui blue button" href="">Create Order</a></a>
+                            <a class="ui inverted red button" href="">Sign Out</a>
+
+                            <a class="ui green button" href="">Login</a>
+                            <a class="ui inverted button" href="">Signup</a>
+
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+
+
+
+    {% endblock %}
+
+    {% block footer %}
+        <div class="ui inverted vertical footer segment">
+            <div class="ui container">
+                <div class="ui stackable inverted divided equal height stackable grid">
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">About</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">Sitemap</a>
+                            <a href="#" class="item">Contact Us</a>
+                            <a href="#" class="item">Religious Ceremonies</a>
+                            <a href="#" class="item">Gazebo Plans</a>
+                        </div>
+                    </div>
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">Services</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">Banana Pre-Order</a>
+                            <a href="#" class="item">DNA FAQ</a>
+                            <a href="#" class="item">How To Access</a>
+                            <a href="#" class="item">Favorite X-Men</a>
+                        </div>
+                    </div>
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">Footer Header</h4>
+                        <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+</div>
+{% block scripts %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/semantic.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+{% endblock %}
+
+
+</body>
+
+</html>
