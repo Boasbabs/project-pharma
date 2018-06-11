@@ -1,0 +1,23 @@
+{% extends "frontend/base_generic.html" %}
+
+{% block content %}
+
+    {% block menu %}
+        <div class="ui menu">
+            <a class="item">Browse</a>
+            <a class="item">Submit</a>
+            <div class="right menu">
+                <div class="ui category search item">
+                    <div class="ui transparent icon input">
+                        <input class="prompt" type="text" placeholder="Search animals...">
+                        <i class="search link icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+                <a class="item">Sign Up</a>
+                <a class="item">Help</a>
+            </div>
+        </div>
+    {% endblock %}
+    <h1>This is nigeria</h1>
+{% endblock %}

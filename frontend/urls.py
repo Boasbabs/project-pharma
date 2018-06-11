@@ -1,8 +1,11 @@
 from django.urls import path, include
 
-from . import views
+from .views import landing
 
 app_name = "frontend"
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", landing.index, name="index"),
+    # path("results", results, name="results")
 ]
+
+

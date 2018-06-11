@@ -16,8 +16,27 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from frontend.views import landing, retailer, wholesaler
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("frontend.urls", namespace="frontend"))
+    path("", include("frontend.urls", namespace="frontend")),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/signup/', landing.SignUpView.as_view(), name='user_signup'),
+    path('accounts/signup/retailer/', retailer.RetailerSignUpView.as_view(), name='retailer_signup'),
+    path('accounts/signup/wholesaler/', wholesaler.WholesalerSignUpView.as_view(), name='wholesaler_signup'),
+
+
+
 ]
+
+
+# TODO
+"""
+1. authentication and authorization
+2. retailer app
+3. supplier app
+4. product app
+5. cart
+6. order app *(maybe)
+"""

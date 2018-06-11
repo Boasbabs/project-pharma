@@ -92,6 +92,22 @@ h1, h2, h3, h4 {
     background-size: cover;
 }
 
+.seventy-width {
+    width: 70%;
+}
+
+.ui.search .seventy-width .prompt {
+    border-radius: 0.2rem;
+}
+
+.ui.big.search > .results {
+    left: 15%;
+}
+
+.zero-border-radius {
+    border-radius: 0 !important;
+}
+
 #signup, #signup-driver, #signup-shipper {
     /*background: url("/static/img/9.jpg") no-repeat fixed;*/
     background-size: cover;

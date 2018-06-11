@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Truckr Logistics - The most comfortable way to connect shippers to carriers</title>
+    <title>Alticure</title>
 
     <link href="{% static 'css/semantic-ui/semantic.min.css' %}" rel="stylesheet" type="text/css" />
     {% block stylesheets %}
@@ -37,7 +37,7 @@
                 <a class="ui  button" href="">Login</a>
             </div>
             <div class="item">
-                <a class="ui primary button" href="">Signup</a>
+                <a class="ui primary button" href="{% url 'user_signup' %}">Signup User</a>
             </div>
 
         </div>
@@ -46,7 +46,7 @@
 
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
-    <div class="item"><div class="ui sub blue header">PharmaX</div></div>
+    <div class="item"><div class="ui sub blue header">Alticure</div></div>
     <a class="active item">Home</a>
     <a class="item" href="">About</a>
     <a class="item" href="">How It Works</a>
@@ -54,8 +54,8 @@
         <a class=" item" href="">Home</a></a>
         <a class=" item" href="">Sign Out</a>
     {% else %}
-    <a class="item" href="">Login</a>
-    <a class="item" href="">Signup</a>
+        <a class="item" href="">Login</a>
+        <a class="item" href="">Signup</a>
     {% endif %}
 </div>
 <!-- Page Contents -->
@@ -69,18 +69,18 @@
                     <a class="toc item">
                         <i class="sidebar icon"></i>
                     </a>
-                    <div class="item"><div class="ui sub logo header">PharmaX</div></div>
+                    <div class="item"><div class="ui sub logo header">Alticure</div></div>
 
                     <a class="active right item" href="">Home</a>
                     <a class="item" href="">About</a>
                     <a class="item" href="">How It Works</a>
                     <div class=" item">
 
-                            <a class="ui blue button" href="">Create Order</a></a>
-                            <a class="ui inverted red button" href="">Sign Out</a>
+                        <a class="ui blue button" href="">Create Order</a></a>
+                        <a class="ui inverted red button" href="">Sign Out</a>
 
-                            <a class="ui green button" href="">Login</a>
-                            <a class="ui inverted button" href="">Signup</a>
+                        <a class="ui green button" href="">Login</a>
+                        <a class="ui inverted button" href="">Signup</a>
 
                     </div>
                 </div>
@@ -127,6 +127,40 @@
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/semantic.min.js' %}"></script>
     <script src="{% static 'js/index.js' %}"></script>
+    <script>
+
+        var content = [
+            { title: 'Abaloparatide Injection' },
+            { title: 'Abatacept Injection' },
+            { title: 'Amphotericin B Lipid Complex Injection' },
+            { title: 'Antigua' },
+            { title: 'Acamprosate' },
+            { title: 'Albania' },
+            { title: 'Armenia' },
+            { title: 'Abemaciclib' },
+            { title: 'Angola' },
+            { title: 'Argentina' },
+            { title: 'American Samoa' },
+            { title: 'Abstral' },
+            { title: 'Absorica  Isotretinoin' },
+            { title: 'Abraxane  Paclitaxel Injection' },
+            { title: 'AbobotulinumtoxinA Injection' },
+            { title: 'Abitrexate' },
+            { title: 'Fentanyl' },
+            { title: 'Abiraterone' },
+            { title: 'Methotrexate Injection' },
+            { title: 'Abilify Maintena' },
+            { title: 'Aripiprazole Injection' },
+            { title: 'Abilify  Aripiprazole Injection' },
+            { title: 'Abilify  Aripiprazole' },
+            { title: 'Acalabrutinib' }
+            // etc
+        ];
+        $('#landing-search-bar')
+            .search({
+                source: content
+            });
+    </script>
 {% endblock %}
 
 

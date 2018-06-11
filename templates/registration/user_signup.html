@@ -1,0 +1,26 @@
+{% extends "registration/base.html" %}
+
+{% load i18n %}
+
+{% load semanticui %}
+
+{% block registration_tag %}
+Sign-Up to <em>{{ user_type }}</em> account
+{% endblock %}
+
+{% block registration_content %}
+
+
+    <p>Already have an Alticure account? Then please <a href="#">sign in</a>.</p>
+
+    <form class="ui form" id="" method="post" action="">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button class="ui teal button" type="submit">Sign up &raquo;</button>
+    </form>
+
+
+
+{% endblock %}

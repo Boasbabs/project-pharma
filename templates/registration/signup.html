@@ -1,0 +1,26 @@
+{% extends "frontend/base_generic.html" %}
+
+{% block content %}
+
+    <div id="index-masthead" class="ui inverted vertical blue masthead center aligned segment">
+
+        {% block menu %}
+            {{ block.super }}
+        {% endblock %}
+        <div class="ui container">
+            <h1 class="ui inverted header">
+                We are glad to have you
+            </h1>
+            <h3>in the most comfortable way while saving cost.</h3>
+            <!-- search bar -->
+
+            <a class="ui huge green button" href="{% url 'retailer_signup' %}">Retailer <i class="up arrow icon"></i></a>
+            <a class="ui huge olive button" href="{% url 'wholesaler_signup' %}">Wholesaler <i class="right arrow icon"></i></a>
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}
