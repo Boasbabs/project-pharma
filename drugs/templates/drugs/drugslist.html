@@ -1,0 +1,167 @@
+{% extends "frontend/base_generic.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    {% block menu %}
+        <div class="ui menu">
+            <div class="header item">
+                ALTICURE
+            </div>
+            {#            <a class="item">Alticure</a>#}
+            <a class="item">Catalog</a>
+            <div class="right menu">
+                <div class="ui category search item">
+                    <div class="ui transparent icon input">
+                        <input class="prompt" type="text" placeholder="Search animals...">
+                        <i class="search link icon"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+                <a class="item">Sign Up</a>
+                <a class="item">Help</a>
+            </div>
+        </div>
+    {% endblock %}
+    <div class="ui container">
+        <div class="ui text menu ">
+            <div class="item">
+
+                <h1 class="ui dividing green header">
+                    Search Results
+                </h1>
+            </div>
+            <div class="right item">
+                <a href="{% url 'shopping_cart:order_summary' %}"  class="ui icon green large button">
+                        <i class="cart icon"></i> Add to Cart
+                    </a>
+
+{#                <a href="{% url 'shopping_cart:order_summary' %}" class="ui button">Your Carts</a>#}
+            </div>
+        </div>
+        <table class="ui single line selectable table" id="drug-list-table">
+            <thead>
+            <tr>
+                <th>Generic Name</th>
+                <th>Brand Name</th>
+                <th>Distributor</th>
+                <th>Form</th>
+                <th>Quantity</th>
+                <th>Add to Cart</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>IBUPROFEN 50MG</td>
+                <td>IBUPROFEN </td>
+                <td>Ernest Chemist</td>
+                <td>TABS</td>
+                <td>
+                    <div class="ui mini form">
+                        <div class="seven wide field">
+                            <input type="number">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="ui icon blue mini button">
+                        <i class="cart plus icon"></i> Add to Cart
+                    </div>
+                    <div class="ui icon red mini button"><i class="trash icon"></i> remove </div>
+                </td>
+            </tr>
+            <tr>
+                <td>IBUPROFEN 200MG</td>
+                <td>IBUPROFEN </td>
+                <td>Ernest Chemist</td>
+                <td>TABS</td>
+                <td>
+                    <div class="ui mini form">
+                        <div class="seven wide field">
+                            <input type="number">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="ui icon blue mini button">
+                        <i class="cart plus icon"></i> Add to Cart
+                    </div>
+                    <div class="ui icon red mini button"><i class="trash icon"></i> remove </div>
+                </td>
+            </tr>
+            <tr>
+                <td>IBUPROFEN 100MG</td>
+                <td>IBUPROFEN </td>
+                <td>Ernest Chemist</td>
+                <td>TABS</td>
+                <td>
+                    <div class="ui mini form">
+                        <div class="seven wide field">
+                            <input type="number">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="ui icon blue mini button">
+                        <i class="cart plus icon"></i> Add to Cart
+                    </div>
+                    <div class="ui icon red mini button"><i class="trash icon"></i> remove </div>
+                </td>
+            </tr>
+            <tr>
+                <td>IBUPROFEN 200MG</td>
+                <td>IBUPROFEN </td>
+                <td>Ernest Chemist</td>
+                <td>TABS</td>
+                <td>
+                    <div class="ui mini form">
+                        <div class="seven wide field">
+                            <input type="number">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="ui icon blue mini button">
+                        <i class="cart plus icon"></i> Add to Cart
+                    </div>
+                    <div class="ui icon red mini button"><i class="trash icon"></i> remove </div>
+                </td>
+            </tr>
+            <tr>
+                <td>IBUPROFEN 200MG</td>
+                <td>IBUPROFEN </td>
+                <td>Ernest Chemist</td>
+                <td>CAPSULE</td>
+                <td>
+                    <div class="ui mini form">
+                        <div class="seven wide field">
+                            <input type="number">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="ui icon blue mini button">
+                        <i class="cart plus icon"></i> Add to Cart
+                    </div>
+                    <div class="ui icon red mini button"><i class="trash icon"></i> remove </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="ui hidden divider"></div>
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'js/dataTables.semanticui.min.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            $(".dataTables_length select").addClass("ui input");
+            $("#drug-list-table_filter").addClass("ui form");
+            $('#drug-list-table').DataTable();
+        } );
+    </script>
+{% endblock %}

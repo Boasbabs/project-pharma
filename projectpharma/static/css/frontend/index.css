@@ -84,6 +84,17 @@ h1, h2, h3, h4 {
   padding-top:6%;
 }
 
+.ui.big.search > .results {
+    width: 70%;
+}
+.ui.search>.results .result {
+    width: 100%;
+}
+.ui.search>.results .result .title {
+
+    font-weight: 500;
+    text-align: left;
+}
 
 /*The home page is here*/
 

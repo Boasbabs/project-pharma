@@ -1,0 +1,215 @@
+{% extends "shopping_cart/base.html" %}
+
+{% block content %}
+    <div class="ui container">
+        <div class="ui text menu ">
+            <div class="item">
+
+                <h1 class="ui dividing header">
+                    Search Results
+                </h1>
+            </div>
+            <div class="right item">
+                <a href="{% url 'shopping_cart:order_summary' %}"  class="ui icon green large button">
+                    <i class="cart icon"></i> Checkout
+                </a>
+
+                {#                <a href="{% url 'shopping_cart:order_summary' %}" class="ui button">Your Carts</a>#}
+            </div>
+        </div>
+        <table class="ui celled selectable table" id="drug-list-table">
+            <thead>
+            <tr>
+                <th>Generic Name</th>
+                <th>Brand Name</th>
+                <th>Manufacturer</th>
+                <th>Supplier</th>
+                <th>Package Size</th>
+                <th>Unit Price ($)</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>IBUPROFEN 50MG</td>
+                <td>IBUPROFEN </td>
+                <td>Ernest Chemist</td>
+                <td>Ernest Chemist</td>
+                <td>100</td>
+                <td>188</td>
+                <td>
+                    100
+                </td>
+                <td>
+                    18,800
+                </td>
+            </tr>
+            <tfoot>
+            <tr>
+                <th colspan="7">
+                    <h4 class="ui grey header">Sub Total</h4>
+                </th>
+                <th colspan="1">
+                    <h4 class="ui grey header">18,800</h4>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="7"><h3>TOTAL</h3></th>
+                <th colspan="7"><h3>18,800</h3></th>
+            </tr>
+            </tfoot>
+
+            </tbody>
+        </table>
+        <div class="ui hidden divider"></div>
+        <div class="ui text large menu ">
+
+            <div class="right item">
+                <a href=""  class="ui icon green massive invoice button">
+                    <i class="cart icon"></i> Checkout
+                </a>
+            </div>
+        </div>
+
+    </div>
+   <div id="invoice" class="ui small modal">
+        <i class="close icon"></i>
+
+        <div class="header">
+            <div class="ui grid">
+                <div class="six wide column">
+                    <div class="ui medium header">
+                        <div class="content">
+                            Invoice
+                            <div class="sub header">NO: 554775/R1 | Date: 03/17/2018</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="four wide column"></div>
+                <div class="six wide column">
+                    <div class="ui medium header">
+                        <div class="content">
+                            Truckr Limited.
+                            <div class="sub header">Payment Department</div>
+                            <div class="sub header">East Legon, Greater Accra</div>
+                            <div class="sub header"><a href="mailto:payment@truckr.com">payment@truckr.com</a></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="ui grid">
+                <div class="row">
+                    <div class="eight wide column">
+                        <div class="ui basic segment">
+                            <div class="ui top attached medium teal label">Company Details</div>
+                            <dl class="dl-horizontal">
+                                <dt>Name</dt>
+                                <dd ><strong>Noodles Corporation</strong></dd>
+                                <dt>Industry</dt>
+                                <dd >Food Department</dd>
+                                <dt>Phone</dt>
+                                <dd>44564567</dd>
+                                <dt>Email</dt>
+                                <dd>mainl@noodlescorp.com</dd>
+                                <dt class=""><strong>Address</strong></dt>
+                                <dd>Field 3, Moon</dd>
+                                <dt><strong>Location</strong></dt>
+                                <dd ><strong>Accra</strong></dd>
+
+                            </dl>
+                        </div>
+                    </div>
+                    {#                    <div class="eight wide column">#}
+                    {#                        <div class="ui segment">#}
+                    {#                            <div class="ui top attached medium label">Company Details</div>#}
+                    {#                            <dl class="dl-horizontal">#}
+                    {#                                <dt>Name</dt>#}
+                    {#                                <dd><strong>UAC Corporation</strong></dd>#}
+                    {#                                <dt>Industry</dt>#}
+                    {#                                <dd>Food Department</dd>#}
+                    {#                                <dt>Address</dt>#}
+                    {#                                <dd>One  Way Redmond, Ghana</dd>#}
+                    {#                                <dt>Phone</dt>#}
+                    {#                                <dd>(425) 882-8080</dd>#}
+                    {#                                <dt>Email</dt>#}
+                    {#                                <dd>contact@uaccorporation.com</dd>#}
+                    {#                            </dl>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                </div>
+                <div class="row">
+                    <table class="ui celled structured compact table">
+                        <thead>
+                        <tr>
+                            <th colspan="4">Services</th>
+                        </tr>
+                        <tr>
+                            <th class="six wide">Details</th>
+                            <th>Unit <i><small>$</small></i></th>
+                            <th>Discount  <i><small>$</small></i></th>
+                            <th>Total  <i><small>$</small></i></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="">
+                                Cargo Shipment from Accra to Kumasi
+                            </td>
+                            <td> 1,800</td>
+                            <td>- 540</td>
+                            <td> 1,260</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="ui single line teal table">
+                        <thead>
+                        <tr>
+                            <th>Sub Total <i><small>$</small></i></th>
+                            <th>Discount <i><small>$</small></i></th>
+                            <th>Total <i><small>$</small></i></th>
+                            <th>Final <i><small>$</small></i></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1,800</td>
+                            <td>- 540</td>
+                            <td>1,260</td>
+                            <td>1,260</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    {#                    <div class="eight wide column">#}
+                    {#                        <div class="ui  segment">#}
+                    {#                            <div class="ui top attached medium label">Comments Details</div>#}
+                    {#                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit repudiandae numquam sit facere blanditiis, quasi distinctio ipsam? Libero odit ex expedita, facere sunt, possimus consectetur dolore, nobis iure amet vero.</p>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                    <div class="eight wide column">
+                        <div class="ui segment">
+                            <div class="ui top attached medium label">Payment Details</div>
+                            {#                                    <p>For your convenience, you may deposit the final amount at one of our banks</p>#}
+                            <ul class="ui list">
+                                <li class="item">Alpha Bank - <span class="mono">MO123456789456123</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui cancel button">Cancel</div>
+            <div class="ui approve green button">Send Invoice</div>
+        </div>
+
+    </div>
+
+{% endblock %}

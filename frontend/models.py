@@ -18,6 +18,9 @@ class Retailer(models.Model):
     phone_number = models.CharField(max_length=15)
     location = models.CharField(max_length=225)
 
+    def __str__(self):
+        return self.retailer_name
+
 
 class Wholesaler(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, related_name="wholesaler")
@@ -25,3 +28,6 @@ class Wholesaler(models.Model):
     facility_reg_number = models.IntegerField()
     phone_number = models.CharField(max_length=15)
     location = models.CharField(max_length=225)
+
+    def __str__(self):
+        return self.wholesaler_name

@@ -21,12 +21,12 @@ from frontend.views import landing, retailer, wholesaler
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("frontend.urls", namespace="frontend")),
+    path("drugs/", include("drugs.urls", namespace="drugs")),
+    path("shopping_cart/", include("shopping_cart.urls", namespace="shopping_cart")),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup/', landing.SignUpView.as_view(), name='user_signup'),
     path('accounts/signup/retailer/', retailer.RetailerSignUpView.as_view(), name='retailer_signup'),
     path('accounts/signup/wholesaler/', wholesaler.WholesalerSignUpView.as_view(), name='wholesaler_signup'),
-
-
 
 ]
 
