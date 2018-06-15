@@ -23,10 +23,10 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "wx%dk&gi#1o@dhinvzr5&ryjczu90tj=b#f67idzjom-+4*0*b"
+SECRET_KEY = config('SECRET_KEY', default='in_production')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 # Application definition
 
