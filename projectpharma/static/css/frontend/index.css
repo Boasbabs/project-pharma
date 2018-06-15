@@ -99,7 +99,7 @@ h1, h2, h3, h4 {
 /*The home page is here*/
 
 #index-masthead {
-    /*background: url("/static/img/8.jpg") no-repeat fixed;*/
+
     background-size: cover;
 }
 
@@ -120,7 +120,6 @@ h1, h2, h3, h4 {
 }
 
 #signup, #signup-driver, #signup-shipper {
-    /*background: url("/static/img/9.jpg") no-repeat fixed;*/
     background-size: cover;
 }
 
