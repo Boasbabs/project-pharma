@@ -9,15 +9,15 @@
             {{ block.super }}
         {% endblock %}
         <div class="ui container">
-            <h1 class="ui inverted green header">
-                Connecting retail pharmacies to best prices
+            <h1 class="ui inverted green big-tagline header">
+                Need to restock your pharmacy? <b class="em-span">Order here</b>
             </h1>
             <h2 class="ui green header">in the most comfortable way while saving cost.</h2>
             <!-- search bar -->
             <div id="landing-search-bar" class="ui big search">
                 <div class="ui action left icon seventy-width input">
                     <i class="search icon"></i>
-                    <input class="prompt " type="text" placeholder="Search drug database">
+                    <input class="prompt " type="text" placeholder="Search Alticure or Type a medicine">
                     <a class="ui blue button" href="{% url 'drugs:drug_list' %}">
                         Search
                     </a>
@@ -25,8 +25,6 @@
 
                 <div class=" results"></div>
             </div>
-
-            {#            <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>#}
         </div>
 
     </div>

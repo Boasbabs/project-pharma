@@ -24,11 +24,14 @@ h1, h2, h3, h4 {
 .masthead .ui.menu .ui.button {
     margin-left: 0.5em;
 }
-.masthead h1.ui.header {
+.masthead .ui.big-tagline.header {
     margin-top: 3em;
     margin-bottom: 0em;
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: normal;
+}
+.em-span {
+    color: #1C0E4C;
 }
 .masthead h2 {
     font-size: 1.7em;

@@ -6,15 +6,8 @@
             <div class="item">
 
                 <h1 class="ui dividing header">
-                    Search Results
+                    Your Cart Summary
                 </h1>
-            </div>
-            <div class="right item">
-                <a href="{% url 'shopping_cart:order_summary' %}"  class="ui icon green large button">
-                    <i class="cart icon"></i> Checkout
-                </a>
-
-                {#                <a href="{% url 'shopping_cart:order_summary' %}" class="ui button">Your Carts</a>#}
             </div>
         </div>
         <table class="ui celled selectable table" id="drug-list-table">
@@ -27,7 +20,7 @@
                 <th>Package Size</th>
                 <th>Unit Price ($)</th>
                 <th>Quantity</th>
-                <th>Subtotal</th>
+                <th>Subtotal ($)</th>
 
             </tr>
             </thead>

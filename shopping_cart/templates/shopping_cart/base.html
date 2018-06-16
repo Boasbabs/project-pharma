@@ -76,15 +76,16 @@
     <!-- Site content !-->
     <div id="site-container" class="" >
         <div class="ui secondary pointing menu ">
-            <div class="item">
-                <h2 class="ui green header">
-                    Alticure
-                </h2>
-            </div>
+{#            <div class="item">#}
+{#                <h2 class="ui green header">#}
+{#                    Alticure#}
+{#                </h2>#}
+{#            </div>#}
+            <a href="{% url 'frontend:index' %}" class="item"><img src="/static/img/logo.png" class="ui small image" style=""></a>
             <div class="right menu">
                 <div class="ui dropdown item labeled icon">
                     <i class="circular bell icon"></i>
-                    <div class="ui red mini label circular">3</div>
+                    <div class="ui mini label circular">3</div>
                     <div class="menu">
                         <div class="header">
                             Notifications
@@ -111,10 +112,10 @@
                 <div class="ui dropdown item">
                     <i class="ui inverted circular user blue icon"></i> {{ user.get_username }}
                     <div class="menu">
-                        <a class="item" href="">Settings</a>
+                        <a class="item" href="#">Settings</a>
                         <div class="ui divider"></div>
                         <a class="item">Need Help?</a>
-                        <a class="item" href="">Sign Out</a>
+                        <a class="item" href="{% url 'logout' %}">Sign Out</a>
                     </div>
                 </div>
             </div>

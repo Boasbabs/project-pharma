@@ -6,15 +6,15 @@
 
     {% block menu %}
         <div class="ui menu">
-            <div class="header item">
+            <a href="{% url 'frontend:index' %}" class="header item">
                 ALTICURE
-            </div>
+            </a>
             {#            <a class="item">Alticure</a>#}
             <a class="item">Catalog</a>
             <div class="right menu">
                 <div class="ui category search item">
                     <div class="ui transparent icon input">
-                        <input class="prompt" type="text" placeholder="Search animals...">
+                        <input class="prompt" type="text" placeholder="Search database...">
                         <i class="search link icon"></i>
                     </div>
                     <div class="results"></div>

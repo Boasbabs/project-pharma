@@ -20,7 +20,12 @@
 
     <div class="ui hidden divider"></div>
 
-    <h1 class="ui center aligned teal header">Alticure</h1>
+    <div class="ui center aligned middle aligned basic padded segment">
+        <img src="/static/img/logo.png" class="ui medium spaced image" style="">
+{#        <a href="{% url 'frontend:index' %}">#}
+{#        </a>#}
+
+    </div>
 
     <div class="ui hidden divider"></div>
 
@@ -37,12 +42,6 @@
 
                 {% endblock %}
             </div>
-            {% block registration_ref_link %}
-                <div class="ui message">
-                    New to us? <a href="#">Sign Up</a>
-                </div>
-            {% endblock %}
-
 
         </div>
     </div>
