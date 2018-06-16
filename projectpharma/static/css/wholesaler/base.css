@@ -1,0 +1,25 @@
+.header {
+  font-weight: 300 !important;
+}
+
+#site-container {
+  margin: 1em 2em !important;
+  width: auto !important;
+  max-width: 980px !important;
+}
+#site-siderbar {
+  padding-top: 1em;
+}
+
+.dl-horizontal dt {
+        float: left;
+    width: 80px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dl-horizontal dd {
+    margin-left: 90px;
+}

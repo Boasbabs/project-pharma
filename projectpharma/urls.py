@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("frontend.urls", namespace="frontend")),
     path("drugs/", include("drugs.urls", namespace="drugs")),
+    path("wholesaler/", include("wholesaler.urls", namespace="wholesaler")),
     path("shopping_cart/", include("shopping_cart.urls", namespace="shopping_cart")),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup/', landing.SignUpView.as_view(), name='user_signup'),

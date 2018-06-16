@@ -1,0 +1,121 @@
+{% extends "wholesaler/base_generic.html" %}
+
+{% block content %}
+    <h2 class="ui header">Summary</h2>
+    <div class="ui hidden divider"></div>
+
+    <div class="ui basic segment">
+        <div class="ui container">
+            <h3 class="ui dividing header">
+                Your Order Stats
+            </h3>
+                <div class="ui basic segment">
+                    <div class="ui grid">
+                        <div class="five wide column">
+                            <div class="ui raised segment">
+                                <div class="ui olive statistic">
+                                    <div class="value">
+                                        1,200
+                                    </div>
+                                    <div class="label">
+                                        Total Orders
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="five wide column">
+                            <div class="ui raised segment">
+                                <div class="ui teal statistic">
+                                    <div class="value">
+                                       $ 5,550
+                                    </div>
+                                    <div class="label">
+                                        Total Worth
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="five wide column">
+                            <div class="ui raised segment">
+                                <div class="ui green statistic">
+                                    <div class="value">
+                                        $ 5,550
+                                    </div>
+                                    <div class="label">
+                                        Total Payable
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="ui segment">
+                    <div class="ui grid">
+                        <div class="row">
+                            <div class="ui center aligned container">
+                                <img src="/static/img/line_graph.png" alt="" class="ui massive image">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table class="ui teal single line table">
+                                <thead>
+                                <tr>
+                                    <th class="six wide">Latest Orders</th>
+                                    <th class="right aligned">Total Order <i><small>$</small></i></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="">
+                                         <h4>Pillpoint from Accra</h4>
+                                    </td>
+                                    <td class="right aligned"> 1,260</td>
+                                </tr>
+                                <tr>
+                                    <td class="">
+                                        Medplus from Nigeria
+                                    </td>
+                                    <td class="right aligned"> 1,000</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table class="ui single line olive table">
+                                <thead>
+                                <tr>
+                                    <th>Sub Total <i><small>$</small></i></th>
+                                    <th>Outstanding <i><small>$</small></i></th>
+                                    <th>Total <i><small>$</small></i></th>
+                                    <th>Final <i><small>$</small></i></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>2, 520</td>
+                                    <td>- 450</td>
+                                    <td>2, 070</td>
+                                    <td>2, 070</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+
+                            <div class="eight wide column">
+                                <div class="ui segment">
+                                    <div class="ui top attached medium label">Payment Details</div>
+                                    <ul class="ui list">
+                                        <li class="item">Alpha Bank - <span class="mono">MO123456789456123</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+    </div>
+{% endblock %}

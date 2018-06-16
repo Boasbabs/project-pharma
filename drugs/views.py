@@ -7,7 +7,7 @@ from drugs.models import Drug
 from frontend.decorators import retailer_required
 
 
-@method_decorator([login_required], name='dispatch')
+# @method_decorator([login_required], name='dispatch')
 class DrugListView(ListView):
     model = Drug
     template_name = "drugs/drugslist.html"
